@@ -9,8 +9,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #333; /* Dark gray for text */
-    background-color: #fff8f0; /* Warm light beige background */
+    color: #8686AC; /* Light lavender text color */
+    background-color: #fff; /* White background */
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 a {
@@ -24,7 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #ffb59d; /* Warm peachy coral */
+    background-color: #505081; /* Darker purple for header background */
 }
 
 .logo {
@@ -33,24 +34,72 @@ header {
     color: #fff;
 }
 
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #272757; /* Deep purple on hover */
+}
+
+/* Navigation styling */
 nav.nav_menu {
     display: flex;
-    gap: 1.5rem; /* Increased gap for more space */
+    gap: 1.5rem;
 }
 
 nav.nav_menu a {
     padding: 0.5rem 1.2rem;
-    background-color: #ffdfcc; /* Soft apricot */
-    color: #333;
+    background-color: #8686AC; /* Light lavender for nav items */
+    color: #0F0E47; /* Very dark navy text color */
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav.nav_menu a:hover {
-    background-color: #ff9f80; /* Peachy orange on hover */
+    background-color: #272757; /* Deep purple on hover */
+    color: #fff; /* White text on hover */
 }
 
-/* Menu Button Styles (Hidden in larger screens, shown on smaller ones) */
+/* Dark mode styles */
+/* Dark mode styles */
+body.dark {
+    background-color: #0F0E47; /* Very dark navy for dark mode background */
+    color: #D1D1E0; /* Lighter shade of lavender for better readability */
+}
+
+body.dark nav.nav_menu a {
+    background-color: #8686AC; /* Light lavender for nav links in dark mode */
+    color: #D1D1E0; /* Lighter text color for better visibility */
+}
+
+body.dark nav.nav_menu a:hover {
+    background-color: #272757; /* Deep purple on hover in dark mode */
+    color: #fff;
+}
+
+body.dark footer {
+    background-color: #272757; /* Deep purple background for footer in dark mode */
+}
+
+body.dark footer .social-icons a {
+    color: #D1D1E0; /* Lighter color for social icons */
+}
+
+body.dark footer .social-icons a:hover {
+    color: #505081; /* Darker purple on hover for social icons in dark mode */
+}
+
+
+/* Mobile menu button styles */
 button.menu-button {
     display: none; /* Hide for larger screens */
     background: transparent;
@@ -60,17 +109,16 @@ button.menu-button {
     cursor: pointer;
 }
 
-/* Dark mode styles */
-body.dark {
-    background-color: #222;
-    color: #eee;
+/* Dark mode toggle button */
+button#toggle-switch {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-body.dark nav.nav_menu a {
-    color: #eee;
-    background-color: #555;
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
     nav.nav_menu {
         display: none; /* Hide navbar on small screens */
@@ -81,27 +129,37 @@ body.dark nav.nav_menu a {
     }
 }
 
-/* Responsive adjustments */
+/* Section styling */
 main {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* Section spacing */
 section {
     padding: 1.5rem 0;
     text-align: center;
 }
 
 section h1 {
-    color: #ffb59d; /* Warm peachy color for headings */
+    color: #272757; /* Deep purple for section headers */
 }
 
 /* Footer styling */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #ffb59d;
+    background-color: #505081; /* Dark purple background for footer */
     color: white;
 }
+
+footer .social-icons a {
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #272757; /* Deep purple on hover for social icons */
+}
+
